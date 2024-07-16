@@ -6,7 +6,7 @@ import g from "@/lib/gptScriptInstance";
 
 const script = "/Users/varshan/programme/projects/storyteller-ai/src/app/api/run-script/story-book.gpt";
 
-export async function POST(request: NextResponse) {
+export async function POST(request: Request) {
     const { story, pages, path } = await request.json();
 
     const opts: RunOpts = {
